@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Interaction Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            gap: 40px;
+            margin-top: 50px;
+            justify-content: center;
+        }
+
+        .box {
+            width: 150px;
+            height: 120px;
+            border: 1px solid #ccc;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .text {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 5px 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Default -->
+    <div class="box">
+        <div class="text" id="text1">Hello</div>
+        <button id="btn1">Button</button>
+    </div>
+
+    <!-- Hover -->
+    <div class="box">
+        <div class="text" id="text2">Hello</div>
+        <button id="btn2">Button</button>
+    </div>
+
+    <!-- Click -->
+    <div class="box">
+        <div class="text" id="text3">Hello</div>
+        <button id="btn3">Button</button>
+    </div>
+</div>
+
+<script>
+    // Hover effect
+    const btn2 = document.getElementById("btn2");
+    const text2 = document.getElementById("text2");
+
+    btn2.addEventListener("mouseover", () => {
+        text2.style.color = "pink";
+        text2.textContent = "Hello";
+    });
+
+    btn2.addEventListener("mouseout", () => {
+        text2.style.color = "black";
+        text2.textContent = "Hello";
+    });
+
+    // Click effect
+    const btn3 = document.getElementById("btn3");
+    const text3 = document.getElementById("text3");
+
+    btn3.addEventListener("click", () => {
+        text3.style.color = "pink";
+        text3.textContent = "Mouse Click";
+    });
+</script>
+
+</body>
+</html>
